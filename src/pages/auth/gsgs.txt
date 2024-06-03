@@ -1,0 +1,29 @@
+{
+    "select": {
+      object (Projection)
+    },
+    "from": [
+      {
+        object (CollectionSelector)
+      }
+    ],
+    "where": {
+      object (Filter)
+    },
+    "orderBy": [
+      {
+        object (Order)
+      }
+    ],
+    "startAt": {
+      object (Cursor)
+    },
+    "endAt": {
+      object (Cursor)
+    },
+    "offset": integer,
+    "limit": integer,
+    "findNearest": {
+      object (FindNearest)
+    }
+  }

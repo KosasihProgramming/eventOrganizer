@@ -1,13 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.leaflet-container {
+  height: 100%;
+}
+
+/* styles for large screens */
+@media (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .auth-main {
+    padding: 6rem 30rem;
+  }
+  .navbar-desktop {
+    display: none;
+  }
+}
+
+/* styles for medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .auth-main {
+    padding: 6rem 30rem;
+  }
+  .navbar-desktop {
+    display: none;
+  }
+  * {
+    padding: 0;
+  }
+}
+
+/* styles for small screens and mobile devices */
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+    width: 100%;
+  }
+  .sidebar {
+    height: 80px;
+    width: 100%;
+    padding: 16px;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+  }
+  .slick-slide > div {
+    margin: 0 10px;
+  }
 }
