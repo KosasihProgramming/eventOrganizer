@@ -34,6 +34,8 @@ import ListLogistik from "./pages/event/listLogistik";
 import ListCatatan from "./pages/event/listCatatan";
 import ProfileUser from "./pages/auth/profile";
 import UpdateProfil from "./pages/auth/updateProfil";
+import Notify from "./pages/event/notify";
+import YourComponent from "./pages/sendMessage";
 function App() {
   const isLoggedIn = sessionStorage.getItem("isLoggedIn");
   const [user, setUser] = useState(null);
@@ -81,6 +83,7 @@ function App() {
               <Route path="/update-profil" element={<UpdateProfil />} />
               <Route path="/detail-event/:id" element={<DetailEvent />} />
               <Route path="/list-event" element={<ListEvent />} />
+              <Route path="/send" element={<YourComponent />} />
               <Route path="/list-catatan/:id" element={<ListCatatan />} />
               <Route path="/list-logistik/:id" element={<ListLogistik />} />
               <Route path="/input-event" element={<InputEvent />} />
