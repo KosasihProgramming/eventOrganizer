@@ -31,25 +31,26 @@ const YourComponent = () => {
   const sendMessage = async (text) => {
     try {
       const response = await fetch(
-        "https://api.telegram.org/bot6982164526:AAFZcqBGMZuHLsgYiuiI4hyhAAzW8ZIOZdc/sendMessage",
+        "https://api.telegram.org/bot7140283752:AAEUOiJb7eO3c_UyLWCyn5-HWb7IeTgSKeY/sendMessage",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            chat_id: "6546310886",
+            chat_id: "-1001812360373",
             text: text,
+            message_thread_id: "18826",
             parse_mode: "html",
           }),
         }
       );
 
       if (response.ok) {
-        Swal.fire("Berhasil", "Alasan Telah Berhasil Dikirim", "success");
+        // Swal.fire("Berhasil", "Alasan Telah Berhasil Dikirim", "success");
         setIsSend(true);
       } else {
-        Swal.fire("Perhatian", "Alasan Gagal dikirim", "warning");
+        // Swal.fire("Perhatian", "Alasan Gagal dikirim", "warning");
       }
     } catch (error) {
       console.error("Error:", error);
